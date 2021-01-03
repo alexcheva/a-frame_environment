@@ -13,9 +13,12 @@
          <!-- <video id="space-video" autoplay loop="true" src="space-video.mp4"> </video> -->
         <!-- <a-asset-item id="logo-obj" 
         src="NebuLion3DLogo3DPrint.obj"></a-asset-item> -->
-         <a-asset-item 
+         <!-- <a-asset-item 
           id="skull" 
-          src="./skull_salazar/scene.gltf"></a-asset-item>
+          src="./skull_salazar/scene.gltf"></a-asset-item> -->
+          <a-asset-item 
+          id="nebuLion" 
+          src="NebuLion3DLogo.gltf"></a-asset-item>
       </a-assets>
       <a-sky src="#space-img"></a-sky>
       <!-- <a-videosphere src="#space-video"></a-videosphere> -->
@@ -24,7 +27,7 @@
         color="#FFD500"
         align="center"
         position="0 3 -4"></a-text>
-       <a-entity 
+<!--        <a-entity 
         gltf-model="#skull" 
         position="0 2 -4" 
         scale="0.5 0.5 0.5"
@@ -32,7 +35,11 @@
           to: 2.2; 
           dir: alternate; 
           dur: 2000; 
-          loop: true"></a-entity>
+          loop: true"></a-entity> -->
+      <a-entity 
+        gltf-model="#nebuLion" 
+        position="0 2 -4" 
+        scale="0.015 0.015 0.015"></a-entity>
       <!-- <a-entity obj-model="obj: #logo-obj"></a-entity> -->
     </a-scene>
   </body>
