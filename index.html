@@ -4,43 +4,23 @@
   </head>
   <body>
     <a-scene>
-      <!-- Change the code below: -->
-      <a-assets>
-        <!-- https://dm0qx8t0i9gc9.cloudfront.net/watermarks/videoYWAdzU2/360-vr-space-3017-virtual-reality-video-flying-through-star-fields-in-space-loop-designed-to-be-used-in-oculus-rift-samsung-gear-vr-and-other-virtual-reality-displays_Sjz6iyePg__9be960a783a8ce3ca8046bae0fd1d997__P640.mp4 -->
-       <!--  https://www.storyblocks.com/video/stock/360-vr-space-3017-virtual-reality-video-flying-through-star-fields-in-space-loop-designed-to-be-used-in-oculus-rift-samsung-gear-vr-and-other-virtual-reality-displays-bsv83ylvxiy68de2w -->
-        <img id="space-img"
-        src="space.jpg">
-         <!-- <video id="space-video" autoplay loop="true" src="space-video.mp4"> </video> -->
-        <!-- <a-asset-item id="logo-obj" 
-        src="NebuLion3DLogo3DPrint.obj"></a-asset-item> -->
-         <!-- <a-asset-item 
-          id="skull" 
-          src="./skull_salazar/scene.gltf"></a-asset-item> -->
-          <a-asset-item 
-          id="nebuLion" 
-          src="NebuLion3DLogo.gltf"></a-asset-item>
+      <a-assets background-color="black">
+      	<img id="space-img"
+        src="assets/img/nebula_img.jpg">
+        <a-asset-item id="logo-obj" 
+        src="assets/3D/NebuLion3DLogo3DPrint.obj"></a-asset-item>
       </a-assets>
       <a-sky src="#space-img"></a-sky>
-      <!-- <a-videosphere src="#space-video"></a-videosphere> -->
       <a-text 
-        value="Welcome!"
+        value="Welcome to TKMedia!"
         color="#FFD500"
         align="center"
         position="0 3 -4"></a-text>
-<!--        <a-entity 
-        gltf-model="#skull" 
-        position="0 2 -4" 
-        scale="0.5 0.5 0.5"
-        animation="property: object3D.position.y;
-          to: 2.2; 
-          dir: alternate; 
-          dur: 2000; 
-          loop: true"></a-entity> -->
-      <a-entity 
-        gltf-model="#nebuLion" 
-        position="0 2 -4" 
-        scale="0.015 0.015 0.015"></a-entity>
-      <!-- <a-entity obj-model="obj: #logo-obj"></a-entity> -->
+      <a-entity obj-model="obj: #logo-obj"
+      	color="green"
+      	position="0 2 -4" 
+      	rotation="0 180 0"
+        scale="0.0015 0.0015 0.0015"></a-entity>
     </a-scene>
   </body>
 </html>
