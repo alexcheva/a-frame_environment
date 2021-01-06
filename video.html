@@ -2,23 +2,26 @@
   <head>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function(event) {
-      document.querySelector("#space-video").components.material.material.map.image.play();
-    }
-    </script>
 
   </head>
   <body>
-    <a-scene>
+    <a-scene loading-screen="dotsColor: blue; backgroundColor: black">
       <!-- Change the code below: -->
       <a-assets background-color="black" >
       	<!-- Purple backround video -->
         <!-- https://dm0qx8t0i9gc9.cloudfront.net/watermarks/videoYWAdzU2/360-vr-space-3017-virtual-reality-video-flying-through-star-fields-in-space-loop-designed-to-be-used-in-oculus-rift-samsung-gear-vr-and-other-virtual-reality-displays_Sjz6iyePg__9be960a783a8ce3ca8046bae0fd1d997__P640.mp4 -->
        <!--  https://www.storyblocks.com/video/stock/360-vr-space-3017-virtual-reality-video-flying-through-star-fields-in-space-loop-designed-to-be-used-in-oculus-rift-samsung-gear-vr-and-other-virtual-reality-displays-bsv83ylvxiy68de2w -->
-       <video id="space-video" autoplay loop="true" webkit-playsinline playsinline src="assets/vid/nebula.mp4" preload="auto" crossorigin="anonymous"> </video>
+       <video id="space-video" loop="true" webkit-playsinline playsinline src="assets/vid/space-video.mp4" preload="auto" crossorigin="anonymous"> </video>
       </a-assets>
-      <a-videosphere src="#space-video"></a-videosphere>
+      <a-videosphere src="#space-video" rotation="0 -86.750 0"></a-videosphere>
+      <a-text value="Click to play" color="#dd100e0" align="center" position="-0.19698 1.80921 -3.68482" text="color: #d100e0"></a-text>
     </a-scene>
+        <script>
+      document.addEventListener('click', function() {
+         document.querySelector("#space-video").play();
+         const text = document.querySelector('a-text');
+         text.parentNode.removeChild(text);
+      });
+    </script>
   </body>
 </html>
